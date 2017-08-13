@@ -4,12 +4,14 @@ function median(arr) {
     let result = 0;
     arr = arr.sort(asc);
     console.log(`排序后数组为:${arr}`);
+//result = (arr[parseInt(arr.length/2)] + arr[parseInt((arr.length-1)/2)])/2;<-朱佳丽的写法
     if (arr.length%2 === 0){
         result = (arr[parseInt(arr.length/2)-1] + arr[parseInt(arr.length/2)])/2;
     }
     else result = arr[Math.floor(arr.length/2)];
     return `数组中位数为:${result}`;
 }
+// function(first,second){return a-b};<-姚思羽的写法
 function asc(first,second){
     if (first === second) return 0;
     if (first > second) return 1;
