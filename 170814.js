@@ -10,6 +10,9 @@ function main(k){
         if (c[i+1] === c[p5]*5)    p5++;
         if (c[i+1] === c[p7]*7)    p7++;
     }
+    console.log(`p3 = ${p3}`);
+    console.log(`p5 = ${p5}`);
+    console.log(`p7 = ${p7}`);
     return c[k];
 }
 console.log(main(4));
