@@ -13,3 +13,6 @@ let arr2 = [2,6,6,3,4,8,1,2,3,0,2,1];
 console.log(main(arr1,7));
 console.log(main(arr1,4));
 console.log(main(arr2,2));
+
+
+
