@@ -6,10 +6,15 @@
 function main(arr1,arr2){
     let result = [];
     var i_1 = [];
+    if (arr1.length<arr2.length){
+        arr1 ^= arr2;
+        arr2 ^= arr1;
+        arr1 ^= arr2;
+    }
     for (let i=0;i<arr2.length;i++){
         for (let j=i;j<arr1.length;j++){
             if (arr2[i] === arr1[j]){
-                i_1.push(j);
+                i_1.push(i);
             }
         }
     }
@@ -18,7 +23,7 @@ function main(arr1,arr2){
         else return false;
     });
     for (let i=0;i<i_1.length;i++){
-        result.push(arr1[i_1[i]]);
+        result.push(arr2[i_1[i]]);
     }
     return result;
 }
@@ -28,3 +33,6 @@ console.log(main(nums1,nums2));
 let arr1 = [1,2,3,4,5,6,7];
 let arr2 = [3,4,5,6,7,8,9];
 console.log(main(arr1,arr2));
+let arr3 = [1,1,2,1,2,2];
+let arr4 = [1,2,2];
+console.log(main(arr3,arr4));
