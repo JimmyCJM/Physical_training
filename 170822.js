@@ -5,26 +5,20 @@
 */
 function main(arr1,arr2){
     let result = [];
-    var [a,b] = [[],[]];
-    if (nums1.length > nums2.length);
-    else {
-        nums1 ^= nums2;
-        nums2 ^= nums1;
-        nums1 ^= nums2;
-    }
+    var i_1 = [];
     for (let i=0;i<arr2.length;i++){
         for (let j=i;j<arr1.length;j++){
             if (arr2[i] === arr1[j]){
-                a.push(j);
-                b.push(i);
+                i_1.push(j);
             }
         }
     }
-    var [i,j] = [a[0],b[0]];
-    while (arr1[i] === arr2[j]){
-        result.push(arr1[i]);
-        i++;
-        j++;
+    i_1 = i_1.filter((value,index) =>{
+        if (i_1.indexOf(value) === index) return true;
+        else return false;
+    });
+    for (let i=0;i<i_1.length;i++){
+        result.push(arr1[i_1[i]]);
     }
     return result;
 }
