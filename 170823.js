@@ -3,7 +3,6 @@
 给定 [1,2,[1,2],[3,4]]，返回 [1,2,1,2,3,4]。
 给定 [4,[3,[2,[1]]]]，返回 [4,3,2,1]。*/
 function main(arr) {
-    arr = arr.map(value =>value.toString());
     return arr.toString().split(",").map(value => parseInt(value));
 }
 console.log(main([1,2,[1,2]]));
